@@ -1,6 +1,8 @@
-import TodoItem from './TodoItem';
+// import React, { useState } from 'react';
+import TodoItem from './components/TodoItem';
 
-const todos = [
+
+const initialTodos = [
   {
     id: 1,
     text: "Faire planning d'apprentissage",
@@ -31,17 +33,33 @@ const todos = [
 
 
 function App() {
+  // const [todos, setTodos] = useState(initialTodos);
+
+  // const ToggleTodo = (selectedTodo: string) => {
+  //   const newTodos = todos.map((todo) => {
+  //     if (todo.text === selectedTodo) {
+  //       return {
+  //         ...todo,
+  //         completed: !todo.completed,
+  //       };
+  //     }
+  //     return todo;
+  //   });
+  //   setTodos(newTodos);
+  // };
+
   
   return (
+
     <div>
       <h1>Ma Todo List</h1>
       <ul>
-        {todos.map((todo) => (
+        {initialTodos.map((todo) => (
           <TodoItem todo={todo} />
         ))}
       </ul>
-    </div>
+    </div> 
   )
 }
 
-export default App
+export default App;
