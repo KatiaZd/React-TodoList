@@ -1,13 +1,3 @@
-import React from 'react';
-
-interface TodoItemProps {
-  todo: {
-    id: number;
-    text: string;
-    completed: boolean;
-  };
-}
-
 const TodoItem = ({ todo }: TodoItemProps) => {
   return (
     <li>
@@ -16,5 +6,6 @@ const TodoItem = ({ todo }: TodoItemProps) => {
     </li>
   );
 };
+
 
 export default TodoItem;
